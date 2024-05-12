@@ -1,0 +1,60 @@
+body {
+    background: linear-gradient(to bottom, #f5f5dc, #8b4513); /* Top (cream) to bottom (brown) gradient */
+    color: #333; /* Darker text color for contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align children elements vertically */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center-align the text for all child elements */
+}
+
+#myBoard {
+    margin-bottom: 20px; /* Adds space between the board and the buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    width: 100%; /* Take the full width of the container */
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Adds space between buttons */
+}
+
+.highlight-white {
+    box-shadow: inset 0 0 3px 3px yellow;
+}
+
+.highlight-black {
+    box-shadow: inset 0 0 3px 3px blue;
+}
+
+.highlight-hint {
+    box-shadow: inset 0 0 3px 3px red;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.no-outline:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-header {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Google Icons (Material Design) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5b14db5f0b.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Chessboard JS -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+        integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+    <script defer src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+
+    <!-- Chess JS (slightly modified) -->
+    <script defer src="js/chess.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script defer src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <h1 class="text-center">Chess AI</h1>
+
+                <div id="accordion">
+                    <div id="settings" class="collapse" aria-labelledby="settingsHeading" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="form-group">
+                                    <label for="search-depth">Search Depth (Black):</label>
+                                    <select id="search-depth">
+                                        <option value="3" selected>3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center justify-content-center">
+                                <div class="form-group">
+                                    <label for="search-depth-white">Search Depth (White):</label>
+                                    <select id="search-depth-white">
+                                        <option value="3" selected>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-center">
+                    <button class="btn btn-header no-outline" data-toggle="collapse" data-target="#compVsComp"
+                        aria-expanded="true" aria-controls="compVsComp">
+                        Computer vs. Computer
+                    </button>
+                </h2>
+                <h3>
+                    <div class="status-display">
+                        <p>Status: <span id="status">Game ready. Make a move.</span></p>
+                    </div>
+                </h3>
+
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-6 my-2">
+                            <button class="btn btn-success" id="compVsCompBtn">Start Game</button>
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <button class="btn btn-danger" id="resetBtn">Stop and Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div id="myBoard"></div>
+                <div class="row my-3 text-center">
+                    <div class="col-md-6 my-2">
+                        <button class="btn btn-danger" id="undoBtn">Undo</button>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <button class="btn btn-success" id="redoBtn">Redo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
